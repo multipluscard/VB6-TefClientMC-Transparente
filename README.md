@@ -36,6 +36,7 @@ Função implementada para recuperar os dados do arquivo <kbd style="background-
 → Coloque o arquivo dentro da pasta Fontes do diretório padrão. 
 → Baixe a versão de DLL mais recente no Portal do Representante. 
 → Cole a DLL dentro da raiz do projeto.
+→ Cole a DLL e o arquivo ConfigMC.ini dentro pasta de instalação da IDE do VB6.
 → Execute.
 
 ````
