@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "tabctl32.ocx"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
 Begin VB.Form FormularioPrincipal 
    BackColor       =   &H8000000E&
    Caption         =   "Exemplo TefClientMC - VB6"
@@ -950,12 +950,12 @@ If (GetParametros(1)) Then
                   If retMsg = "[MENU]" Then
                   
                      If (UBound(arrMsg) > 2) Then
-                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                      Else
-                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                      End If
                      
-                     If vbOKCancel = vbCancel Then
+                     If LCase(answer) = "cancelar" Then
                         CancelarFluxoMCInterativo
                         Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                         MsgBox ("Fluxo Cancelado")
@@ -969,9 +969,9 @@ If (GetParametros(1)) Then
                   End If
                   
                   If retMsg = "[PERGUNTA]" Then
-                    answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                    answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                      
-                     If vbOKCancel = vbCancel Then
+                     If LCase(answer) = "cancelar" Then
                         CancelarFluxoMCInterativo
                         Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                         MsgBox ("Fluxo Cancelado")
@@ -988,16 +988,16 @@ If (GetParametros(1)) Then
                  If retMsg = "[MSG]" Then
                      If (UBound(arrMsg) > 2) Then
                         If InStr(arrMsg(1), "SALDO") And InStr(arrMsg(1), "SALDO") Then
-                           InputBox Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel
+                           InputBox Replace(arrMsg(2), "|", vbNewLine), arrMsg(1)
                         End If
                      End If
                 End If
                 
                 
             If retMsg = "[ERRODISPLAY]" Then
-               answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+               answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
              
-               If vbOKCancel = vbCancel Then
+               If LCase(answer) = "cancelar" Then
                   CancelarFluxoMCInterativo
                   Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                   MsgBox ("Fluxo Cancelado")
@@ -1129,7 +1129,7 @@ Function GetParametros(valid As Integer)
    End If
 End Function
 
-Function AtribuirDados()
+Private Sub AtribuirDados()
    Dim iFileNo As Integer
    iFileNo = FreeFile
    Dim sFileText As String
@@ -1137,8 +1137,13 @@ Function AtribuirDados()
    Dim arr() As String
    Dim aplicacao As String
      
-   aplicacao = CStr(App.Path) + "\ArqCarregaDados.txt"
-      
+   aplicacao = App.Path + "\ArqCarregaDados.txt"
+   
+   data = Format(Date, "yyyymmdd")
+   comunicacao = 1
+   
+   If Dir(App.Path + "\ArqCarregaDados.txt", vbArchive) = "" Then Exit Sub
+   
    Open aplicacao For Input As #iFileNo
    Do While Not EOF(iFileNo)
       sFileText = ""
@@ -1156,9 +1161,8 @@ Function AtribuirDados()
                  codLoja = CStr(arr(1))
       End Select
    Loop
-   data = Format(Date, "yyyymmdd")
-   comunicacao = 1
-End Function
+
+End Sub
 
 Private Sub btnAtributosAParte_Click(Index As Integer)
    FormularioAtributos.Show
@@ -1494,12 +1498,12 @@ Dim dadosCupom As RetCupom
                   
                   If retMsg = "[MENU]" Then
                      If (UBound(arrMsg) > 2) Then
-                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                      Else
-                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                      End If
                      
-                     If vbOKCancel = vbCancel Then
+                     If LCase(answer) = "cancelar" Then
                         CancelarFluxoMCInterativo
                         Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                         MsgBox ("Fluxo Cancelado")
@@ -1514,9 +1518,9 @@ Dim dadosCupom As RetCupom
                   End If '[MENU]
                   
                  If retMsg = "[PERGUNTA]" Then
-                   answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                   answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                    
-                   If vbOKCancel = vbCancel Then
+                   If LCase(answer) = "cancelar" Then
                       CancelarFluxoMCInterativo
                       Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                       MsgBox ("Fluxo Cancelado")
@@ -1532,15 +1536,15 @@ Dim dadosCupom As RetCupom
                If retMsg = "[MSG]" Then
                     If (UBound(arrMsg) > 2) Then
                        If InStr(arrMsg(1), "SALDO") And InStr(arrMsg(1), "SALDO") Then
-                          InputBox Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel
+                          InputBox Replace(arrMsg(2), "|", vbNewLine), arrMsg(1)
                        End If
                     End If
                End If '[MSG]
                
                If retMsg = "[ERRODISPLAY]" Then
-                  answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                  answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                 
-                  If vbOKCancel = vbCancel Then
+                  If LCase(answer) = "cancelar" Then
                         CancelarFluxoMCInterativo
                         Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                         MsgBox ("Fluxo Cancelado")
@@ -1631,9 +1635,9 @@ Private Sub Form_Load()
       panelTransacoes.Visible = False
       lbLog.Height = 9030
     End If
-   recebe = AtribuirDados()
-   ChDir "C:\DLL" 'Mudar o diretório atual para reconhecer a dll
    
+    
+    'ChDir "C:\DLL" 'Se necessário Mudar o diretório atual para reconhecer a dll
    
 End Sub
 
