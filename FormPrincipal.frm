@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "tabctl32.ocx"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
 Begin VB.Form FormularioPrincipal 
    BackColor       =   &H8000000E&
    Caption         =   "Exemplo TefClientMC - VB6"
@@ -117,7 +117,7 @@ Begin VB.Form FormularioPrincipal
          Width           =   1575
       End
       Begin VB.Label lbTransacoes 
-         Caption         =   "TRANSA√á√ïES"
+         Caption         =   "TRANSA«’ES"
          BeginProperty Font 
             Name            =   "Arial"
             Size            =   9.75
@@ -146,7 +146,7 @@ Begin VB.Form FormularioPrincipal
       Style           =   1
       TabHeight       =   520
       BackColor       =   -2147483637
-      TabCaption(0)   =   "CART√ÉO"
+      TabCaption(0)   =   "CART√O"
       TabPicture(0)   =   "FormPrincipal.frx":0004
       Tab(0).ControlEnabled=   -1  'True
       Tab(0).Control(0)=   "LineCartao"
@@ -156,29 +156,29 @@ Begin VB.Form FormularioPrincipal
       Tab(0).Control(2)=   "btnCancelar"
       Tab(0).Control(2).Enabled=   0   'False
       Tab(0).ControlCount=   3
-      TabCaption(1)   =   "ADMINISTRA√á√ÉO"
+      TabCaption(1)   =   "ADMINISTRA«√O"
       TabPicture(1)   =   "FormPrincipal.frx":0020
       Tab(1).ControlEnabled=   0   'False
-      Tab(1).Control(0)=   "btnColetaCpf"
-      Tab(1).Control(1)=   "btnReimpressao"
-      Tab(1).Control(2)=   "btnExcluirBins"
-      Tab(1).Control(3)=   "LineAdm"
+      Tab(1).Control(0)=   "LineAdm"
+      Tab(1).Control(1)=   "btnExcluirBins"
+      Tab(1).Control(2)=   "btnReimpressao"
+      Tab(1).Control(3)=   "btnColetaCpf"
       Tab(1).ControlCount=   4
       TabCaption(2)   =   "QRMULTIPLUS"
       TabPicture(2)   =   "FormPrincipal.frx":003C
       Tab(2).ControlEnabled=   0   'False
-      Tab(2).Control(0)=   "btnStatusTransacao"
-      Tab(2).Control(1)=   "btnCancelarEstorno"
-      Tab(2).Control(2)=   "btnPicPay"
-      Tab(2).Control(3)=   "btnMercadoPago"
+      Tab(2).Control(0)=   "LineQR"
+      Tab(2).Control(1)=   "lbObs(1)"
+      Tab(2).Control(2)=   "btnMenuPsp(0)"
+      Tab(2).Control(3)=   "btnMenuPsp(1)"
       Tab(2).Control(4)=   "btnPspCliente"
-      Tab(2).Control(5)=   "btnMenuPsp(1)"
-      Tab(2).Control(6)=   "btnMenuPsp(0)"
-      Tab(2).Control(7)=   "lbObs(1)"
-      Tab(2).Control(8)=   "LineQR"
+      Tab(2).Control(5)=   "btnMercadoPago"
+      Tab(2).Control(6)=   "btnPicPay"
+      Tab(2).Control(7)=   "btnCancelarEstorno"
+      Tab(2).Control(8)=   "btnStatusTransacao"
       Tab(2).ControlCount=   9
       Begin VB.CommandButton btnStatusTransacao 
-         Caption         =   "STATUS TRANSA√á√ÉO"
+         Caption         =   "STATUS TRANSA«√O"
          BeginProperty Font 
             Name            =   "Arial Narrow"
             Size            =   9.75
@@ -263,7 +263,7 @@ Begin VB.Form FormularioPrincipal
          Width           =   2925
       End
       Begin VB.CommandButton btnMenuPsp 
-         Caption         =   "MENU OP√á√ïES PSP"
+         Caption         =   "MENU OP«’ES PSP"
          BeginProperty Font 
             Name            =   "Arial Narrow"
             Size            =   9.75
@@ -281,7 +281,7 @@ Begin VB.Form FormularioPrincipal
          Width           =   2925
       End
       Begin VB.CommandButton btnMenuPsp 
-         Caption         =   "MENU OP√á√ïES PSP"
+         Caption         =   "MENU OP«’ES PSP"
          BeginProperty Font 
             Name            =   "Arial Narrow"
             Size            =   9.75
@@ -316,7 +316,7 @@ Begin VB.Form FormularioPrincipal
          Width           =   2925
       End
       Begin VB.CommandButton btnReimpressao 
-         Caption         =   "REIMPRESS√ÉO"
+         Caption         =   "REIMPRESS√O"
          BeginProperty Font 
             Name            =   "Arial Narrow"
             Size            =   9.75
@@ -413,9 +413,9 @@ Begin VB.Form FormularioPrincipal
          TabCaption(1)   =   "DEBITO"
          TabPicture(1)   =   "FormPrincipal.frx":0074
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "btnConsultaDebito"
+         Tab(1).Control(0)=   "btnDebito"
          Tab(1).Control(1)=   "btnDebitoAVista"
-         Tab(1).Control(2)=   "btnDebito"
+         Tab(1).Control(2)=   "btnConsultaDebito"
          Tab(1).ControlCount=   3
          TabCaption(2)   =   "FROTA"
          TabPicture(2)   =   "FormPrincipal.frx":0090
@@ -445,7 +445,7 @@ Begin VB.Form FormularioPrincipal
             Width           =   1215
          End
          Begin VB.CommandButton btnDebitoAVista 
-            Caption         =   "D√âBITO A VISTA"
+            Caption         =   "D…BITO A VISTA"
             BeginProperty Font 
                Name            =   "Arial Narrow"
                Size            =   9.75
@@ -462,7 +462,7 @@ Begin VB.Form FormularioPrincipal
             Width           =   2925
          End
          Begin VB.CommandButton btnCredito 
-            Caption         =   "CR√âDITO"
+            Caption         =   "CR…DITO"
             CausesValidation=   0   'False
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -481,7 +481,7 @@ Begin VB.Form FormularioPrincipal
             Width           =   2925
          End
          Begin VB.CommandButton btnCreditoAVista 
-            Caption         =   "CR√âDITO A VISTA"
+            Caption         =   "CR…DITO A VISTA"
             CausesValidation=   0   'False
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -500,7 +500,7 @@ Begin VB.Form FormularioPrincipal
             Width           =   2925
          End
          Begin VB.CommandButton btnCreditoParceladoLoja 
-            Caption         =   "CR√âDITO PARCELADO LOJA"
+            Caption         =   "CR…DITO PARCELADO LOJA"
             CausesValidation=   0   'False
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -519,7 +519,7 @@ Begin VB.Form FormularioPrincipal
             Width           =   2925
          End
          Begin VB.CommandButton btnCreditoParceladoAdm 
-            Caption         =   "CR√âDITO PARCELADO ADM"
+            Caption         =   "CR…DITO PARCELADO ADM"
             BeginProperty Font 
                Name            =   "Arial Narrow"
                Size            =   9.75
@@ -554,7 +554,7 @@ Begin VB.Form FormularioPrincipal
             Width           =   1215
          End
          Begin VB.CommandButton btnPreAutorizacao 
-            Caption         =   "PR√â-AUTORIZA√á√ÉO"
+            Caption         =   "PR…-AUTORIZA«√O"
             BeginProperty Font 
                Name            =   "Arial Narrow"
                Size            =   9.75
@@ -572,7 +572,7 @@ Begin VB.Form FormularioPrincipal
             Width           =   1695
          End
          Begin VB.CommandButton btnConfPreAutorizacao 
-            Caption         =   "CONF.PR√â-AUTORIZA√á√ÉO"
+            Caption         =   "CONF.PR…-AUTORIZA«√O"
             BeginProperty Font 
                Name            =   "Arial Narrow"
                Size            =   9.75
@@ -590,7 +590,7 @@ Begin VB.Form FormularioPrincipal
             Width           =   2295
          End
          Begin VB.CommandButton btnCancPreAutorizacao 
-            Caption         =   "CANC.PR√â-AUTORIZA√á√ÉO"
+            Caption         =   "CANC.PR…-AUTORIZA«√O"
             BeginProperty Font 
                Name            =   "Arial Narrow"
                Size            =   9.75
@@ -607,7 +607,7 @@ Begin VB.Form FormularioPrincipal
             Width           =   2295
          End
          Begin VB.CommandButton btnDebito 
-            Caption         =   "D√âBITO"
+            Caption         =   "D…BITO"
             BeginProperty Font 
                Name            =   "Arial Narrow"
                Size            =   9.75
@@ -661,7 +661,7 @@ Begin VB.Form FormularioPrincipal
       Begin VB.Label lbObs 
          BackColor       =   &H8000000B&
          BackStyle       =   0  'Transparent
-         Caption         =   "Obs: Para visualizar o QR Code utilizar o par√¢metro ExibirQrCode=2 no CliMC.ini"
+         Caption         =   "Obs: Para visualizar o QR Code utilizar o par‚metro ExibirQrCode=2 no CliMC.ini"
          BeginProperty Font 
             Name            =   "Arial"
             Size            =   9.75
@@ -860,7 +860,7 @@ Begin VB.Form FormularioPrincipal
    End
    Begin VB.CheckBox ckMultiplus 
       BackColor       =   &H8000000E&
-      Caption         =   " Multiplos Cart√µes"
+      Caption         =   " Multiplos Cartıes"
       BeginProperty Font 
          Name            =   "Arial"
          Size            =   9.75
@@ -950,12 +950,12 @@ If (GetParametros(1)) Then
                   If retMsg = "[MENU]" Then
                   
                      If (UBound(arrMsg) > 2) Then
-                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                      Else
-                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                      End If
                      
-                     If vbOKCancel = vbCancel Then
+                     If LCase(answer) = "cancelar" Then
                         CancelarFluxoMCInterativo
                         Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                         MsgBox ("Fluxo Cancelado")
@@ -969,9 +969,9 @@ If (GetParametros(1)) Then
                   End If
                   
                   If retMsg = "[PERGUNTA]" Then
-                    answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                    answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                      
-                     If vbOKCancel = vbCancel Then
+                     If LCase(answer) = "cancelar" Then
                         CancelarFluxoMCInterativo
                         Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                         MsgBox ("Fluxo Cancelado")
@@ -988,16 +988,16 @@ If (GetParametros(1)) Then
                  If retMsg = "[MSG]" Then
                      If (UBound(arrMsg) > 2) Then
                         If InStr(arrMsg(1), "SALDO") And InStr(arrMsg(1), "SALDO") Then
-                           InputBox Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel
+                           InputBox Replace(arrMsg(2), "|", vbNewLine), arrMsg(1)
                         End If
                      End If
                 End If
                 
                 
             If retMsg = "[ERRODISPLAY]" Then
-               answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+               answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
              
-               If vbOKCancel = vbCancel Then
+               If LCase(answer) = "cancelar" Then
                   CancelarFluxoMCInterativo
                   Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                   MsgBox ("Fluxo Cancelado")
@@ -1064,7 +1064,7 @@ ErrorHandler:
                End If
                
                If retFim = 0 Then
-                  AdicionarLog Format(Date, "dd/mm/yyyy") + " - FIM DA TRANSA√á√ÉO"
+                  AdicionarLog Format(Date, "dd/mm/yyyy") + " - FIM DA TRANSA«√O"
                   
                Else
                   AdicionarLog Format(Date, "dd/mm/yyyy") + " - ERRO: "
@@ -1077,40 +1077,40 @@ ErrorHandler:
          Util.AdicionaLog "Erro - IniciaFuncaoMCInterativo", ""
       End If
  Else
-   MsgBox ("Par√¢metros n√£o conferem")
+   MsgBox ("Par‚metros n„o conferem")
  End If
  
 End Function
 
 Function RetornaErro()
       If Retorno = 1 Then
-          MsgBox "Erro gen√©rico na execu√ß√£o", vbCritical, "Warning"
+          MsgBox "Erro genÈrico na execuÁ„o", vbCritical, "Warning"
       ElseIf Retorno = 30 Then
-          MsgBox "N√£o foi encontrado o caminho do ClientD.exe", vbCritical, "Warning"
+          MsgBox "N„o foi encontrado o caminho do ClientD.exe", vbCritical, "Warning"
       ElseIf Retorno = 31 Then
-          MsgBox "ConfigMC.ini est√° vazio", vbCritical, "Warning"
+          MsgBox "ConfigMC.ini est· vazio", vbCritical, "Warning"
       ElseIf Retorno = 32 Then
-          MsgBox "ClientD.exe n√£o encontrado", vbCritical, "Warning"
+          MsgBox "ClientD.exe n„o encontrado", vbCritical, "Warning"
       ElseIf Retorno = 33 Then
-          MsgBox "ClientD.exe n√£o est√° em execu√ß√£o", vbCritical, "Warning"
+          MsgBox "ClientD.exe n„o est· em execuÁ„o", vbCritical, "Warning"
       ElseIf Retorno = 34 Then
           MsgBox "Erro ao iniciar ClientD.exe", vbCritical, "Warning"
       ElseIf Retorno = 35 Then
-          MsgBox "N√£o foi poss√≠vel criar o arquivo de resposta", vbCritical, "Warning"
+          MsgBox "N„o foi possÌvel criar o arquivo de resposta", vbCritical, "Warning"
       ElseIf Retorno = 36 Then
-          MsgBox "Erro na manipula√ß√£o do arquivo de resposta", vbCritical, "Warning"
+          MsgBox "Erro na manipulaÁ„o do arquivo de resposta", vbCritical, "Warning"
       ElseIf Retorno = 37 Then
           MsgBox "Erro na leitura do arquivo ConfigMC.ini", vbCritical, "Warning"
       ElseIf Retorno = 38 Then
-          MsgBox "Valor da transa√ß√£o com formato incorreto", vbCritical, "Warning"
+          MsgBox "Valor da transaÁ„o com formato incorreto", vbCritical, "Warning"
       ElseIf Retorno = 39 Then
-          MsgBox "Execut√°vel de envio de transa√ß√µes n√£o encontrado", vbCritical, "Warning"
+          MsgBox "Execut·vel de envio de transaÁıes n„o encontrado", vbCritical, "Warning"
       ElseIf Retorno = 40 Then
-          MsgBox "CNPJ Inv√°lido ou no formato incorreto", vbCritical, "Warning"
+          MsgBox "CNPJ Inv·lido ou no formato incorreto", vbCritical, "Warning"
       ElseIf Retorno = 41 Then
-          MsgBox "ClientD.exe est√° em processo de atualiza√ß√£o", vbCritical, "Warning"
+          MsgBox "ClientD.exe est· em processo de atualizaÁ„o", vbCritical, "Warning"
       ElseIf Retorno = 42 Then
-          MsgBox "A automa√ß√£o n√£o est√° sendo executada no modo administrador", vbCritical, "Warning"
+          MsgBox "A automaÁ„o n„o est· sendo executada no modo administrador", vbCritical, "Warning"
       Else
           MsgBox Err.Description, vbCritical, "Warning"
       End If
@@ -1118,7 +1118,7 @@ End Function
 
 Function GetParametros(valid As Integer)
    If Cnpj = "" Or pdv = "" Or codLoja = "" Or data = "" Or txbCupom.Text = "" Or txbNsu.Text = "" Or txbValor.Text = "" Or txbParcela.Text = "" Then
-        answer = MsgBox("Informe todos os par√¢metros", vbInformation, "Par√¢metros")
+        answer = MsgBox("Informe todos os par‚metros", vbInformation, "Par‚metros")
         GetParametros = 0
    Else
         parcela = txbParcela.Text
@@ -1129,7 +1129,7 @@ Function GetParametros(valid As Integer)
    End If
 End Function
 
-Function AtribuirDados()
+Private Sub AtribuirDados()
    Dim iFileNo As Integer
    iFileNo = FreeFile
    Dim sFileText As String
@@ -1137,8 +1137,13 @@ Function AtribuirDados()
    Dim arr() As String
    Dim aplicacao As String
      
-   aplicacao = CStr(App.Path) + "\ArqCarregaDados.txt"
-      
+   aplicacao = App.Path + "\ArqCarregaDados.txt"
+   
+   data = Format(Date, "yyyymmdd")
+   comunicacao = 1
+   
+   If Dir(App.Path + "\ArqCarregaDados.txt", vbArchive) = "" Then Exit Sub
+   
    Open aplicacao For Input As #iFileNo
    Do While Not EOF(iFileNo)
       sFileText = ""
@@ -1156,9 +1161,8 @@ Function AtribuirDados()
                  codLoja = CStr(arr(1))
       End Select
    Loop
-   data = Format(Date, "yyyymmdd")
-   comunicacao = 1
-End Function
+
+End Sub
 
 Private Sub btnAtributosAParte_Click(Index As Integer)
    FormularioAtributos.Show
@@ -1210,9 +1214,9 @@ Private Sub btnConfirma_Click(Index As Integer)
          
          retFim = FinalizaFuncaoMCInterativo(98, Cnpj, parc, item.Cupom, item.Valor, item.Nsu, data, pdv, codLoja, comunicacao, "")
          Util.AdicionaLog CStr(98) + Cnpj + CStr(item.Parcelas) + item.Cupom + item.Valor + sNsu + data + pdv + codLoja + CStr(comunicacao), ""
-         Util.AdicionaLog "Retorno Confirma√ß√£o/Desfazimento - " + CStr(98) + ":" + CStr(retFim), ""
+         Util.AdicionaLog "Retorno ConfirmaÁ„o/Desfazimento - " + CStr(98) + ":" + CStr(retFim), ""
          
-         AdicionarLog Format(Date, "dd/mm/yyyy") + " - Retorno Confirma√ß√£o/Desfazimento - " + "98" + " : " + CStr(retFim)
+         AdicionarLog Format(Date, "dd/mm/yyyy") + " - Retorno ConfirmaÁ„o/Desfazimento - " + "98" + " : " + CStr(retFim)
          AdicionarLog Format(Date, "dd/mm/yyyy") + " - " + "98" + ", " + CStr(Cnpj) + ", " + CStr(parc) + ", " + CStr(item.Cupom) + ", " + CStr(item.Valor) + ", " + CStr(item.Nsu) + ", " + CStr(data) + ", " + CStr(pdv) + ", " + codLoja + ", " + CStr(comunicacao)
          
       Next
@@ -1223,7 +1227,7 @@ Private Sub btnConfirma_Click(Index As Integer)
       Next
       
       transacoespendentes.Clear
-      AdicionarLog Format(Date, "dd/mm/yyyy") + " - FIM DA TRANSA√á√ÉO"
+      AdicionarLog Format(Date, "dd/mm/yyyy") + " - FIM DA TRANSA«√O"
       
       ckMultiplus.Value = 0
    Else
@@ -1254,9 +1258,9 @@ Private Sub btnConfirma_Click(Index As Integer)
       retFim = FinalizaFuncaoMCInterativo(98, Cnpj, CInt(parc), CStr(transacao.Cupom), transacao.Valor, sNsu, data, pdv, codLoja, comunicacao, "")
       
       Util.AdicionaLog CStr(98) + Cnpj + CStr(transacao.Parcelas) + transacao.Cupom + transacao.Valor + transacao.Nsu + data + pdv + codLoja + CStr(comunicacao), ""
-      Util.AdicionaLog "Retorno Confirma√ß√£o/Desfazimento - " + CStr(98) + ":" + CStr(retFim), ""
+      Util.AdicionaLog "Retorno ConfirmaÁ„o/Desfazimento - " + CStr(98) + ":" + CStr(retFim), ""
          
-      AdicionarLog Format(Date, "dd/mm/yyyy") + " - Retorno Confirma√ß√£o/Desfazimento - " + "98" + " : " + CStr(retFim)
+      AdicionarLog Format(Date, "dd/mm/yyyy") + " - Retorno ConfirmaÁ„o/Desfazimento - " + "98" + " : " + CStr(retFim)
       AdicionarLog Format(Date, "dd/mm/yyyy") + " - " + "98" + ", " + Cnpj + ", " + CStr(parc) + ", " + CStr(transacao.Cupom) + ", " + CStr(transacao.Valor) + ", " + CStr(transacao.Nsu) + ", " + data + ", " + pdv + ", " + codLoja + ", " + CStr(comunicacao)
    
       transacoespendentes.RemoveItem iTrans - 1
@@ -1267,7 +1271,7 @@ Private Sub btnConfirma_Click(Index As Integer)
       End If
 
       If lstCupons.Count = 0 Then
-         AdicionarLog Format(Date, "dd/mm/yyyy") + " - FIM DA TRANSA√á√ÉO"
+         AdicionarLog Format(Date, "dd/mm/yyyy") + " - FIM DA TRANSA«√O"
          ckMultiplus.Value = 0
          Exit Sub
       End If
@@ -1337,11 +1341,11 @@ Private Sub btnDesfaz_Click()
          
          retFim = FinalizaFuncaoMCInterativo(99, Cnpj, parc, item.Cupom, item.Valor, item.Nsu, data, pdv, codLoja, comunicacao, "")
          
-         AdicionarLog Format(Date, "dd/mm/yyyy") + " - Retorno Confirma√ß√£o/Desfazimento - " + "99" + " : " + CStr(retFim)
+         AdicionarLog Format(Date, "dd/mm/yyyy") + " - Retorno ConfirmaÁ„o/Desfazimento - " + "99" + " : " + CStr(retFim)
          AdicionarLog Format(Date, "dd/mm/yyyy") + " - " + "99" + ", " + CStr(Cnpj) + ", " + CStr(parc) + ", " + CStr(item.Cupom) + ", " + CStr(item.Valor) + ", " + CStr(item.Nsu) + ", " + CStr(data) + ", " + CStr(pdv) + ", " + codLoja + ", " + CStr(comunicacao)
          
          Util.AdicionaLog CStr(99) + Cnpj + CStr(item.Parcelas) + item.Cupom + item.Valor + sNsu + data + pdv + codLoja + CStr(comunicacao), ""
-         Util.AdicionaLog "Retorno Confirma√ß√£o/Desfazimento - " + CStr(99) + ":" + CStr(retFim), ""
+         Util.AdicionaLog "Retorno ConfirmaÁ„o/Desfazimento - " + CStr(99) + ":" + CStr(retFim), ""
       
       Next
       
@@ -1351,7 +1355,7 @@ Private Sub btnDesfaz_Click()
       Next
       
       transacoespendentes.Clear
-      AdicionarLog Format(Date, "dd/mm/yyyy") + " - FIM DA TRANSA√á√ÉO"
+      AdicionarLog Format(Date, "dd/mm/yyyy") + " - FIM DA TRANSA«√O"
       
       ckMultiplus.Value = 0
          
@@ -1382,9 +1386,9 @@ Private Sub btnDesfaz_Click()
       retFim = FinalizaFuncaoMCInterativo(99, Cnpj, CInt(parc), CStr(transacao.Cupom), transacao.Valor, sNsu, data, pdv, codLoja, comunicacao, "")
       
       Util.AdicionaLog CStr(98) + Cnpj + CStr(transacao.Parcelas) + transacao.Cupom + transacao.Valor + transacao.Nsu + data + pdv + codLoja + CStr(comunicacao), ""
-      Util.AdicionaLog "Retorno Confirma√ß√£o/Desfazimento - " + CStr(98) + ":" + CStr(retFim), ""
+      Util.AdicionaLog "Retorno ConfirmaÁ„o/Desfazimento - " + CStr(98) + ":" + CStr(retFim), ""
       
-      AdicionarLog Format(Date, "dd/mm/yyyy") + " - Retorno Confirma√ß√£o/Desfazimento - " + "99" + " : " + CStr(retFim)
+      AdicionarLog Format(Date, "dd/mm/yyyy") + " - Retorno ConfirmaÁ„o/Desfazimento - " + "99" + " : " + CStr(retFim)
       AdicionarLog Format(Date, "dd/mm/yyyy") + " - " + "99" + ", " + Cnpj + ", " + CStr(parc) + ", " + CStr(transacao.Cupom) + ", " + CStr(transacao.Valor) + ", " + CStr(transacao.Nsu) + ", " + data + ", " + pdv + ", " + codLoja + ", " + CStr(comunicacao)
    
       transacoespendentes.RemoveItem iTrans - 1
@@ -1395,7 +1399,7 @@ Private Sub btnDesfaz_Click()
       End If
       
       If lstCupons.Count = 0 Then
-         AdicionarLog Format(Date, "dd/mm/yyyy") + " - FIM DA TRANSA√á√ÉO"
+         AdicionarLog Format(Date, "dd/mm/yyyy") + " - FIM DA TRANSA«√O"
          ckMultiplus.Value = 0
       End If
       
@@ -1494,12 +1498,12 @@ Dim dadosCupom As RetCupom
                   
                   If retMsg = "[MENU]" Then
                      If (UBound(arrMsg) > 2) Then
-                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                      Else
-                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                       answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                      End If
                      
-                     If vbOKCancel = vbCancel Then
+                     If LCase(answer) = "cancelar" Then
                         CancelarFluxoMCInterativo
                         Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                         MsgBox ("Fluxo Cancelado")
@@ -1514,9 +1518,9 @@ Dim dadosCupom As RetCupom
                   End If '[MENU]
                   
                  If retMsg = "[PERGUNTA]" Then
-                   answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                   answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                    
-                   If vbOKCancel = vbCancel Then
+                   If LCase(answer) = "cancelar" Then
                       CancelarFluxoMCInterativo
                       Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                       MsgBox ("Fluxo Cancelado")
@@ -1532,15 +1536,15 @@ Dim dadosCupom As RetCupom
                If retMsg = "[MSG]" Then
                     If (UBound(arrMsg) > 2) Then
                        If InStr(arrMsg(1), "SALDO") And InStr(arrMsg(1), "SALDO") Then
-                          InputBox Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel
+                          InputBox Replace(arrMsg(2), "|", vbNewLine), arrMsg(1)
                        End If
                     End If
                End If '[MSG]
                
                If retMsg = "[ERRODISPLAY]" Then
-                  answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1), , vbOKCancel)
+                  answer = InputBox(Replace(arrMsg(2), "|", vbNewLine), arrMsg(1))
                 
-                  If vbOKCancel = vbCancel Then
+                  If LCase(answer) = "cancelar" Then
                         CancelarFluxoMCInterativo
                         Util.AdicionaLog "CancelarFluxoMCInterativo()", ""
                         MsgBox ("Fluxo Cancelado")
@@ -1597,10 +1601,10 @@ Dim dadosCupom As RetCupom
          End If 'If retorno = 0
 
          If NovaVenda = True Then
-            If MsgBox("Deseja Pagar com mais um cart√£o", vbYesNo, "Pagar com Multiplus Cart√µes") = vbYes Then
+            If MsgBox("Deseja Pagar com mais um cart„o", vbYesNo, "Pagar com Multiplus Cartıes") = vbYes Then
                Dim novoValor As String
                InsereNovoCartao = True
-               novoValor = InputBox("Digite o valor da Transa√ß√£o:", "Multiplus Cart√µes")
+               novoValor = InputBox("Digite o valor da TransaÁ„o:", "Multiplus Cartıes")
                Valor = novoValor
             Else
                InsereNovoCartao = False
@@ -1631,9 +1635,9 @@ Private Sub Form_Load()
       panelTransacoes.Visible = False
       lbLog.Height = 9030
     End If
-   recebe = AtribuirDados()
-   ChDir "C:\DLL" 'Mudar o diret√≥rio atual para reconhecer a dll
    
+    AtribuirDados
+    'ChDir "C:\DLL" 'Se necess·rio Mudar o diretÛrio atual para reconhecer a dll
    
 End Sub
 
