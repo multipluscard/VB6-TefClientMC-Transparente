@@ -159,23 +159,23 @@ Begin VB.Form FormularioPrincipal
       TabCaption(1)   =   "ADMINISTRAÇÃO"
       TabPicture(1)   =   "FormPrincipal.frx":0020
       Tab(1).ControlEnabled=   0   'False
-      Tab(1).Control(0)=   "btnColetaCpf"
-      Tab(1).Control(1)=   "btnReimpressao"
-      Tab(1).Control(2)=   "btnExcluirBins"
-      Tab(1).Control(3)=   "LineAdm"
+      Tab(1).Control(0)=   "LineAdm"
+      Tab(1).Control(1)=   "btnExcluirBins"
+      Tab(1).Control(2)=   "btnReimpressao"
+      Tab(1).Control(3)=   "btnColetaCpf"
       Tab(1).ControlCount=   4
       TabCaption(2)   =   "QRMULTIPLUS"
       TabPicture(2)   =   "FormPrincipal.frx":003C
       Tab(2).ControlEnabled=   0   'False
-      Tab(2).Control(0)=   "btnStatusTransacao"
-      Tab(2).Control(1)=   "btnCancelarEstorno"
-      Tab(2).Control(2)=   "btnPicPay"
-      Tab(2).Control(3)=   "btnMercadoPago"
+      Tab(2).Control(0)=   "LineQR"
+      Tab(2).Control(1)=   "lbObs(1)"
+      Tab(2).Control(2)=   "btnMenuPsp(0)"
+      Tab(2).Control(3)=   "btnMenuPsp(1)"
       Tab(2).Control(4)=   "btnPspCliente"
-      Tab(2).Control(5)=   "btnMenuPsp(1)"
-      Tab(2).Control(6)=   "btnMenuPsp(0)"
-      Tab(2).Control(7)=   "lbObs(1)"
-      Tab(2).Control(8)=   "LineQR"
+      Tab(2).Control(5)=   "btnMercadoPago"
+      Tab(2).Control(6)=   "btnPicPay"
+      Tab(2).Control(7)=   "btnCancelarEstorno"
+      Tab(2).Control(8)=   "btnStatusTransacao"
       Tab(2).ControlCount=   9
       Begin VB.CommandButton btnStatusTransacao 
          Caption         =   "STATUS TRANSAÇÃO"
@@ -413,9 +413,9 @@ Begin VB.Form FormularioPrincipal
          TabCaption(1)   =   "DEBITO"
          TabPicture(1)   =   "FormPrincipal.frx":0074
          Tab(1).ControlEnabled=   0   'False
-         Tab(1).Control(0)=   "btnConsultaDebito"
+         Tab(1).Control(0)=   "btnDebito"
          Tab(1).Control(1)=   "btnDebitoAVista"
-         Tab(1).Control(2)=   "btnDebito"
+         Tab(1).Control(2)=   "btnConsultaDebito"
          Tab(1).ControlCount=   3
          TabCaption(2)   =   "FROTA"
          TabPicture(2)   =   "FormPrincipal.frx":0090
@@ -1636,7 +1636,7 @@ Private Sub Form_Load()
       lbLog.Height = 9030
     End If
    
-    
+    AtribuirDados
     'ChDir "C:\DLL" 'Se necessário Mudar o diretório atual para reconhecer a dll
    
 End Sub
